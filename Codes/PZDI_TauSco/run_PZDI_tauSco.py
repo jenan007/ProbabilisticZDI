@@ -457,7 +457,7 @@ def SH_energy_numerical(theta, phi, area, SHcoef, lmax, ibet, igam):
     """
     Computes the magnetic energy distribution numerically for each harmonic component.
 
-    This function computes the magnetic energy numerically (surface integral of B^2) for each harmonic 
+    This function computes the magnetic energy numerically (surface integral of B^2) for each harmonic
     component of the spherical harmonics expansion. The energy distribution of a given set of spherical harmonic (SH) coefficients
     is calculated in terms of their poloidal and toroidal components, relative energies for each degree `l`, and the
     modes |m| < l / 2 (here referred to as axisymmetric)
@@ -1016,6 +1016,11 @@ if probabilisticZDI:     # generate probabilistic weak-field solution
                                      errV, obsV, obsI, pred_std, post_std,
                                      filename='output\predictive_undertainty_case1.pdf')
 
+        plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI_, prfV_, star_incl, obs_v, obs_ntimes, obs_vstep,
+                                         obs_phases, errV,
+                                         obsV, obsI, pred_std, post_std,
+                                         filename='output\predictive_undertainty_case1_subset.pdf')
+
     if plotPredictiveDistribution_Case2:  # plot prediction uncertainty for Case 2
 
         # calculate parameters of the predictive and posterior predictive distribution
@@ -1085,6 +1090,11 @@ if probabilisticZDI:     # generate probabilistic weak-field solution
                                      obs_phases,
                                      errV, obsV, obsI, pred_std, post_std,
                                      filename='output\predictive_undertainty_case2.pdf')
+
+        plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI_, prfV_, star_incl, obs_v, obs_ntimes, obs_vstep,
+                                         obs_phases, errV,
+                                         obsV, obsI, pred_std, post_std,
+                                         filename='output\predictive_undertainty_case2_subset.pdf')
 
         # compare mean fits of components with eta=16 and eta=421
         num_samples_ = 2
@@ -1220,6 +1230,12 @@ if probabilisticZDI:     # generate probabilistic weak-field solution
         plot_predictive_distribution(lat, lon, Bfield, prfI_, prfV_, star_incl, obs_v, obs_ntimes, obs_vstep, obs_phases,
                                      errV, obsV, obsI, pred_std, post_std,
                                      filename='output\predictive_undertainty_case3.pdf')
+
+        plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI_, prfV_, star_incl, obs_v, obs_ntimes,
+                                                  obs_vstep,
+                                                  obs_phases, errV,
+                                                  obsV, obsI, pred_std, post_std,
+                                                  filename='output\predictive_undertainty_case3_subset.pdf')
 
 
     if plotSamples_Case2: # plot samples from posterior distribution based on statistical model with a mixture prior with 1000 eta-dependent components

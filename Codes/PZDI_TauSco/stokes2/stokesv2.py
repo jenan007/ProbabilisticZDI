@@ -622,7 +622,7 @@ def plot_predictive_distribution(lat, lon, Bfield, prfI, prfV, star_incl, obs_v,
                 if posterior_uncertainty is not None:
                     ax4.fill_between(obs_v, (prfV[i, :] + num_stds * posterior_uncertainty[i, :]) * 100 + yo,
                                      (prfV[i, :] - num_stds * posterior_uncertainty[i, :]) * 100 + yo,
-                                     color='darkgray')
+                                     color='deepskyblue', alpha=0.6,)
                 if samples is not None:
                     for path_idx in range(num_samples):
                         path = samples[:, path_idx].reshape((49, 18))
@@ -634,7 +634,7 @@ def plot_predictive_distribution(lat, lon, Bfield, prfI, prfV, star_incl, obs_v,
                 if posterior_uncertainty is not None:
                     ax4.fill_between(obs_v, (prfV[i, :] + num_stds * posterior_uncertainty[i, :]) * 100 + yo,
                                      (prfV[i, :] - num_stds * posterior_uncertainty[i, :]) * 100 + yo,
-                                     color='darkgray')
+                                     color='deepskyblue', alpha=0.6,)
                 if samples is not None:
                     for path_idx in range(num_samples):
                         path = samples[:, path_idx].reshape((49, 18))
@@ -662,7 +662,7 @@ def plot_predictive_distribution(lat, lon, Bfield, prfI, prfV, star_incl, obs_v,
                     if posterior_uncertainty is not None:
                         ax5.fill_between(obs_v, (prfV[i + i0, :] + num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
                                          (prfV[i + i0, :] - num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
-                                         color='darkgray')
+                                         color='deepskyblue', alpha=0.6,)
                     if samples is not None:
                         for path_idx in range(num_samples):
                             path = samples[:, path_idx].reshape((49, 18))
@@ -675,7 +675,7 @@ def plot_predictive_distribution(lat, lon, Bfield, prfI, prfV, star_incl, obs_v,
                     if posterior_uncertainty is not None:
                         ax5.fill_between(obs_v, (prfV[i + i0, :] + num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
                                          (prfV[i + i0, :] - num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
-                                         color='darkgray')
+                                         color='deepskyblue', alpha=0.6,)
                     if samples is not None:
                         for path_idx in range(num_samples):
                             path = samples[:, path_idx].reshape((49, 18))
@@ -798,7 +798,7 @@ def plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI, prfV, star
                 if posterior_uncertainty is not None:
                     ax4.fill_between(obs_v, (prfV[i, :] + num_stds * posterior_uncertainty[i, :]) * 100 + yo,
                                      (prfV[i, :] - num_stds * posterior_uncertainty[i, :]) * 100 + yo,
-                                     color='darkgray')
+                                     color='deepskyblue', alpha=0.6,)
                 if samples is not None:
                     for path_idx in range(num_samples):
                         path = samples[:, path_idx].reshape((49, 18))
@@ -813,7 +813,7 @@ def plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI, prfV, star
                 if posterior_uncertainty is not None:
                     ax4.fill_between(obs_v, (prfV[i, :] + num_stds * posterior_uncertainty[i, :]) * 100 + yo,
                                      (prfV[i, :] - num_stds * posterior_uncertainty[i, :]) * 100 + yo,
-                                     color='darkgray')
+                                     color='deepskyblue', alpha=0.6,)
                 if samples is not None:
                     for path_idx in range(num_samples):
                         path = samples[:, path_idx].reshape((49, 18))
@@ -848,7 +848,7 @@ def plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI, prfV, star
                         ax5.fill_between(obs_v,
                                          (prfV[i + i0, :] + num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
                                          (prfV[i + i0, :] - num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
-                                         color='darkgray')
+                                         color='deepskyblue', alpha=0.6,)
                     if samples is not None:
                         for path_idx in range(num_samples):
                             path = samples[:, path_idx].reshape((49, 18))
@@ -865,7 +865,7 @@ def plot_predictive_distribution_phase_subset(lat, lon, Bfield, prfI, prfV, star
                         ax5.fill_between(obs_v,
                                          (prfV[i + i0, :] + num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
                                          (prfV[i + i0, :] - num_stds * posterior_uncertainty[i + i0, :]) * 100 + yo,
-                                         color='darkgray')
+                                         color='deepskyblue', alpha=0.6,)
                     if samples is not None:
                         for path_idx in range(num_samples):
                             path = samples[:, path_idx].reshape((49, 18))
