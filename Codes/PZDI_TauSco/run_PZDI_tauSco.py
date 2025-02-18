@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 import time
 import math
 import jax.numpy as jnp
@@ -700,6 +701,10 @@ plotSamples_Case3 = False                            # draw and plot samples of 
 plotMagneticEnergyDistribution_Case1 = False         # plot numerical distribution of magnetic energy spectrum for Case 1
 plotMagneticEnergyDistribution_Case2 = False         # plot numerical distribution of magnetic energy spectrum for Case 2
 plotMagneticEnergyDistribution_Case3 = False         # plot numerical distribution of magnetic energy spectrum for Case 3
+
+# create output folder
+folder_name = 'output'
+os.makedirs(folder_name, exist_ok=True)
 
 # parameters for harmonic expansion of magnetic field and surface discretization
 ntot= 10173                # number of surface elements
